@@ -3,16 +3,23 @@ import Navigation from "./Navigation";
 import Home from "../pages/Home";
 import Counter from "../pages/Counter";
 import TodoApp from "../pages/Todo";
+import Profile from "../pages/Profile";
+import Layout from "./Layout";
+import Product from "../pages/Products";
 
 function AppRoutes() {
     return (
         <Router>
             <Navigation />
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/counter" element={<Counter />}></Route>
-                <Route path="/todo" element={<TodoApp />}></Route>
-            </Routes>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/counter" element={<Counter />}></Route>
+                    <Route path="/todo" element={<TodoApp />}></Route>
+                    <Route path="/profile" element={<Profile />}></Route>
+                    <Route path="/products" element={<Product />}></Route>
+                </Routes>
+            </Layout>
         </Router>
     );
 }
