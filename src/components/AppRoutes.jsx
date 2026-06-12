@@ -10,6 +10,7 @@ import layoutStyles from "./Layout/Layout.module.scss";
 import Product from "../pages/Products";
 import Comment from "../pages/Comments";
 import Weather from "../pages/Weather";
+import Buttons from "../pages/Buttons";
 
 function AppRoutes() {
     return (
@@ -25,6 +26,7 @@ function AppRoutes() {
                         <Route path="/products" element={<Product />}></Route>
                         <Route path="/comments" element={<Comment />}></Route>
                         <Route path="/weather" element={<Weather />}></Route>
+                        <Route path="/buttons" element={<Buttons />}></Route>
                     </Routes>
                 </Layout>
             </div>
