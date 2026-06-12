@@ -6,6 +6,7 @@ import TodoApp from "../pages/Todo";
 import Profile from "../pages/Profile";
 import Layout from "./Layout";
 import Product from "../pages/Products";
+import Comment from "../pages/Comments";
 
 function AppRoutes() {
     return (
@@ -18,6 +19,7 @@ function AppRoutes() {
                     <Route path="/todo" element={<TodoApp />}></Route>
                     <Route path="/profile" element={<Profile />}></Route>
                     <Route path="/products" element={<Product />}></Route>
+                    <Route path="/comments" element={<Comment />}></Route>
                 </Routes>
             </Layout>
         </Router>
