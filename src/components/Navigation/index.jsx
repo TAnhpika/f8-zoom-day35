@@ -38,22 +38,24 @@ const navItems = [
 
 function Navigation() {
     return (
-        <nav>
-            <ul>
-                {navItems.map((item, index) => (
-                    <li key={index}>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive ? styles.active : ""
-                            }
-                            to={item.to}
-                        >
-                            {item.title}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <div className={styles.page}>
+            <nav className={styles.nav}>
+                <ul className={styles.list}>
+                    {navItems.map((item, index) => (
+                        <li key={index}>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? `${styles.link} ${styles.active}` : styles.link
+                                }
+                                to={item.to}
+                            >
+                                {item.title}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </div>
     );
 }
 

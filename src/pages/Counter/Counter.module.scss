@@ -1,10 +1,11 @@
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background: #f4f7fb;
-    font-family: Arial, sans-serif;
+.page {
+    min-height: calc(100vh - 60px); /* trừ chiều cao nav */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: #f7f8fb;
+    font-family: "Segoe UI", Roboto, sans-serif;
     color: #1f2937;
 }
 
@@ -34,7 +35,8 @@ body {
     }
 }
 
-button {
+.increase,
+.decrease {
     padding: 12px 22px;
     border: none;
     border-radius: 999px;
@@ -44,17 +46,17 @@ button {
         transform 0.2s ease,
         background-color 0.2s ease;
     margin: 0 8px;
-
-    &.increase {
-        background: #2c7be5;
-        color: #fff;
-    }
-
-    &.decrease {
-        background: #f736d7;
-        color: #111827;
-    }
     &:hover {
         transform: translateY(-2px);
     }
+}
+
+.increase {
+    background: #2c7be5;
+    color: #fff;
+}
+
+.decrease {
+    background: #f736d7;
+    color: #111827;
 }
